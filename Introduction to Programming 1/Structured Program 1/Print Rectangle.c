@@ -19,8 +19,8 @@ int main(void)
     }
  
     while (h[s] != 0 && w[s] != 0){
-        for (i = 0; i < h[s]; i++){  //c
-            for (j = 0; j < w[s]; j++){  //‰¡
+        for (i = 0; i < h[s]; i++){  //ç¸¦
+            for (j = 0; j < w[s]; j++){  //æ¨ª
                 printf("#");
             }
             printf("\n");
