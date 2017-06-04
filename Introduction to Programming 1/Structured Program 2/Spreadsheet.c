@@ -9,6 +9,7 @@ int main(void)
 	int count[NUM + 1][NUM + 1] = { 0 };
 	int count1[NUM][NUM];
 	int sum = 0;
+	
 	scanf("%d %d", &r, &c);
 
 	for (i = 0; i < r; i++){
@@ -17,20 +18,20 @@ int main(void)
 			count[i][j] = count1[i][j];
 		}
 	}
-	//Še—ñ‚ÌŒvŽZ
+	//å„åˆ—ã®åˆè¨ˆå€¤
 	for (i = 0; i < c; i++){
 		for (j = 0; j < r; j++){
 			count[r][i] += count1[j][i];
 		}
-		sum += count[r][i];//•\‘S‘Ì‚Ì‡Œv’l‚Ì‰ÁŽZ
+		sum += count[r][i];//å„åˆ—ã®åˆè¨ˆå€¤ã®åŠ ç®—
 	}
-	//Šes‚ÌŒvŽZ
+	//å„è¡Œã®åˆè¨ˆå€¤
 	for (i = 0; i < r; i++){
 		for (j = 0; j < c; j++){
 			count[i][c] += count1[i][j];
 		}
 	}
-	//•\‘S‘Ì‚Ì‡Œv’l
+	//è¡¨å…¨ä½“ã®åˆè¨ˆå€¤
 	count[r][c] = sum;
 
 	for (i = 0; i <= r; i++){
